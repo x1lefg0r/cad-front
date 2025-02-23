@@ -32,7 +32,7 @@ const Home = () => {
         //         </div>
         //     </section>
         // </div>
-        <>
+        <div id="homeContainer">
             <section>
 
             </section>
@@ -43,9 +43,9 @@ const Home = () => {
 
             </section>
             <section>
-                
+
             </section>
-        </>
+        </div>
     );
 };
 
