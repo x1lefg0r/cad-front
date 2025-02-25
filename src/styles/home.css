@@ -1,0 +1,66 @@
+
+.homeContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.title p{
+    font-size: 96px;
+    font-family: "Dela Gothic One", serif;
+    color:#473E4F;
+    line-height: 1.1;
+    position: relative;
+    margin:0;
+}
+.Dela{
+    font-size: 48px;
+    font-family: "Dela Gothic One", serif;
+    color:#473E4F;
+    line-height: 1.1;
+    position: relative;
+    margin:0;
+}
+.title{
+    position: relative;
+    margin-top: 140px;
+    margin-left: 60px;
+}
+
+.first{
+    min-height: 920px;
+    min-width: 1920px;
+    display: flex;
+    flex-direction: column;
+    justify-self: start;
+}
+.Jura{
+    font-size: 36px;
+    font-family: "Jura";
+    font-weight: 700;
+    color: #473E4F;
+    position: relative;
+    margin-top: 50px;
+    margin-left: 60px;
+}
+.text{
+    display: flex;
+    margin-left:60px;
+    flex-direction: column;
+    max-width: 20%;
+}
+.second{
+    max-height: 920px;
+    min-width: 1920px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.box{
+    background-color: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.164);
+    min-height: 520px;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+}

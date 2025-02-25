@@ -26,6 +26,7 @@
     position: static;
     z-index: 999;
     border-radius: 20px;
+    min-height: 80px;
 }
 
 #headerContainer{

@@ -8,9 +8,10 @@ const Header = () => {
         <div id="headerContainer">
             <div id="header">
                 <nav className="navigation">
-                    <NavLink to="/"><img src={homelogo} alt="Home" style={{maxWidth: "40px", maxHeight: "40px", marginLeft: "20px"}} ></img></NavLink>
-                    <p className=""><NavLink to="/projects">Проекты</NavLink></p>
-                    <p className=""><NavLink to="/teams">Команды</NavLink></p>
+                    <NavLink to="/"><img src={homelogo} alt="Home" style={{maxWidth: "60px", maxHeight: "60px", marginLeft: "20px"}} ></img></NavLink>
+                    <a>О нас</a>
+                    <NavLink to="/projects">Проекты</NavLink>
+                    <NavLink to="/teams">Команды</NavLink>
                 </nav>
             </div>
         </div>

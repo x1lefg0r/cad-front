@@ -1,4 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Jura:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap');
 body{
   margin: 0;
   background-color: #f8f8f8;
+}
+.Optima{
+  font-family: 'Optima';
+  font-size: 24px;
 }
