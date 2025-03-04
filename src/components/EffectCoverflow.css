@@ -18,15 +18,16 @@ body {
   
 }
 h1{
-    font-family: "Optima Normal";
+    font-family: "Jura";
     font-size: 24px;
     margin:20px;
+    filter: drop-shadow(2px 2px 12px rgb(0, 0, 0));
 }
 
 .swiper-slide {
   background-position: center;
   background-size: cover;
   width: 620px;
-  height: 620px;
+  height: 400px;
   background-color: #eee;
 }

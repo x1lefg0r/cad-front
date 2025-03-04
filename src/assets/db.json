@@ -2,20 +2,20 @@
     "projects":[
         {
             "id":1,
-            "name":"Project 1",
-            "description":"Description of project 1",
+            "name":"3D атлас редукторов",
+            "description":"",
             "image":"atlas.jpg"
         },
         {
             "id":2,
-            "name":"Project 2",
-            "description":"Description of project 2",
+            "name":"ИЭТР на Forge",
+            "description":"",
             "image":"ietr.jpg"
         },
         {
             "id":3,
-            "name":"Project 3",
-            "description":"Description of project 3",        
+            "name":"Облачное хранилище",
+            "description":"",        
             "image":"pdm.jpg"
         }
     ]

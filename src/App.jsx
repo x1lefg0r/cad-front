@@ -3,7 +3,10 @@ import Navigation from './routes/Navigation'
 
 function App() {
   return (
-    <Navigation/>
+    <div style={{width: "100%", display: "flex", flexDirection: "column", alignItems: "center"}}>
+      <Navigation/>
+    </div>
+    
   )
 }
 
