@@ -2,5 +2,76 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    margin-top:12%;
+    margin-top:2%;
+}
+
+ .projcard{
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+     align-items: center;
+     background-color: white;
+     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.164);
+     border-radius: 20px;
+     padding: 40px;
+
+ }
+
+ .textproj{
+     display: flex;
+     flex-direction: column;
+     justify-content: flex-start;
+     align-items: flex-start;
+     padding: 40px;
+     line-height: 0.9;
+     max-width: 380px;
+
+ }
+
+
+
+.project-button {
+  font-size: 16px;
+  font-weight: 200;
+  letter-spacing: 1px;
+  padding: 13px 20px 13px;
+  outline: 0;
+  border: 1px solid black;
+  cursor: pointer;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.project-button:after {
+  content: "";
+  background-color: #ffd900;
+  width: 100%;
+  z-index: -1;
+  position: absolute;
+  height: 100%;
+  top: 7px;
+  left: 7px;
+  transition: 0.2s;
+}
+
+.project-button:hover:after {
+  top: 0px;
+  left: 0px;
+}
+
+.project-button-text{
+    font-family: 'Jura', sans-serif;
+    font-size: 14px;
+    position: absolute;
+    left: 20px; 
+    bottom: 10px;
+
+}
+@media (min-width: 768px) {
+  .project-button {
+    padding: 13px 50px 13px;
+  }
 }
