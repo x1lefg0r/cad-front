@@ -4,15 +4,24 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100%;
+    margin-top: -100px;
 
 }
+.projectsContainer{
+    display: flex;
+    position: absolute;
+    width: 100%;
+    margin-top: 10%;
+}
+
 .title p{
     font-size: 96px;
     font-family: "Dela Gothic One", serif;
     color:#473E4F;
     line-height: 1.1;
     position: relative;
-    margin:0;
+    margin:0px;
 }
 .Dela{
     font-size: 48px;
@@ -22,17 +31,29 @@
     position: relative;
     margin:0;
 }
+.aboutus{
+    font-size: 48px;
+    font-family: "Dela Gothic One", serif;
+    color:#473E4F;
+    line-height: 1.1;
+    position: relative;
+    margin:0;
+}
+.optimaaboutus{
+    font-family: 'Optima';
+    font-size: 24px;
+}
 .title{
     position: relative;
     margin-top: 140px;
-    margin-left: 60px;
 }
 
 .first{
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    margin-bottom:60px;
+    width: 100%;
+    align-items: start;
     /* background-image: url('../assets/bghome.webp'); */
 }
 .Jura{
@@ -40,6 +61,15 @@
     font-weight: 700;
     color: #473E4F;
     position: relative;
+}
+.uppermain{
+    font-family: "Jura";
+    font-weight: 700;
+    color: #473E4F;
+    position: relative;
+    font-size: 36px;
+    margin-top: 50px;
+    display: flex;
 }
 .text{
     display: flex;
@@ -64,12 +94,16 @@
     align-items: center;
 }
 .third{
-    max-height: 840px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
 }
-
+.projectscnt{
+    position: absolute;
+    z-index: 998;
+}
 .fourth{
-    max-height: 920px;
-    max-width: 1880px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -80,4 +114,81 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+}
+
+.firsttext{
+    display: flex;
+    flex-direction: column; 
+    justify-content: center; 
+    position: absolute;
+    margin-left: 4%;
+    margin-top: 6%;
+}
+.usualimage{
+    width: 800px;
+}
+@media(max-width: 1820px){
+    .title p{
+        font-size: 84px;
+    }
+    .uppermain{
+        font-size: 24px;
+        position: relative;
+    }
+
+}
+
+@media(max-width: 1680px){
+
+    .title p{
+        font-size: 72px;
+        margin-left: 0px;
+    }
+    .uppermain{
+
+        font-size: 22px;
+        position: relative;
+    }
+    .box{
+        min-height: 620px;
+    }
+
+}
+
+@media(max-width: 1460px){
+
+    .title p{
+        font-size: 64px;
+    }
+    .uppermain{
+        font-size: 20px;
+        margin-top: 30px;
+        position: relative;
+    }
+    .aboutus{
+        font-size: 36px;
+
+    }
+    .optimaaboutus{
+        font-size: 20px;
+    }
+    .usualimage{
+        width: 600px;
+    }
+    .second{
+        height: 600px;
+    }
+}
+
+@media(max-width: 1280px){
+    .firsttext{
+        margin-top: 4%;
+    }
+    .uppermain{
+        margin-left: 0%;
+        font-size: 18px;
+        margin-top: 30px;
+        position: relative;
+    }
+
 }

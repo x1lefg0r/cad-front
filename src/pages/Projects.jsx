@@ -1,29 +1,27 @@
+import React, { useState } from "react";
+
 import '../styles/projects.css'
+// import ProjectCard from '../components/ProjectCard';
 import kot from '../assets/kot.webp'
-import { useState } from "react";
+import KeepMountedModal from "../components/ModalCard";
 
 const Projects = () => {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <div className="project">
-            <article className="project-items">
-                <img src={kot} alt="project-photo" />
-                <div className="project-details">
-                    <h2>Имя проекта</h2>
-                    <p>Краткое описание проекта</p>
-                    <button className="button" onClick={() => setIsOpen(true)}>Раскрыть проект</button>
+        <div className='cnt'>
+            <div style={{display:"flex", flexDirection:"column", justifyContent:"flex-start", gap:"20px", width: "100%", alignItems:"center"}}>
+                <div className='projcard'>
+                    <img src={kot} alt="" style={{width:"200px"}}/>
+                    <div className='textproj'>
+                        <p className='Jura'>Название проекта</p>
+                        <p className='Jura'>Описание проекта</p>
+                        <button className="project-button" onClick={() => setIsOpen(true)}>Подробнее</button>
+                    </div>
                 </div>
-            </article>
-
-            <div className={`project-description ${isOpen ? "open" : ""}`}>
-                <article className="description">
-                    <h2>Имя проекта</h2>
-                    <p>Полное Описание проекта</p>
-                    <button className="button button-description" onClick={() => {setIsOpen(false)}}>Закрыть</button>
-                </article>
             </div>
-        </div>
+            <KeepMountedModal open={isOpen} handleClose={() => setIsOpen(false)} header={"Заголовок"} text={"Описание"}/>
+        </div>    
     );
 };
 

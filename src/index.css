@@ -3,10 +3,6 @@
 body{
   margin: 0;
   background-color: #f8f8f8;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
 }
 .Optima{
   font-family: 'Optima';

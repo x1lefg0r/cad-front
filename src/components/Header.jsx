@@ -5,7 +5,7 @@ import homelogo from "../assets/homelogo.webp"
 const Header = () => {
     
     return(
-            <div className="header">
+            <header className="header">
                 <div className="navigation">
                     <div className="linksleft">
                         <NavLink to="/"><img src={homelogo} alt="Home" style={{maxWidth: "60px", maxHeight: "60px", marginLeft: "20px"}} ></img></NavLink>
@@ -14,10 +14,10 @@ const Header = () => {
                     </div>
                     <div className="linksright">
                         <a href="https://mospolytech.ru/">Наш университет</a>
-                        <a href="https://fit.mospolytech.ru/">Наша факультет</a>
+                        <a href="https://fit.mospolytech.ru/">Наш факультет</a>
                     </div>
                 </div>
-            </div>
+            </header>
     );
 }
 

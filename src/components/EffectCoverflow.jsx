@@ -8,7 +8,7 @@ import 'swiper/css/pagination';
 import './EffectCoverflow.css';
 import { EffectCoverflow, Pagination } from 'swiper/modules';
 
-const Projects = (props) => {
+const ProjectsCoverflow = (props) => {
     const data = props.data.projects
   return (
       <Swiper
@@ -28,21 +28,23 @@ const Projects = (props) => {
         className="mySwiper"
       >
         {data.map((data, id) => (
-          <SwiperSlide key={id}>
-          <div style={{boxShadow: "3px 34px 77px 29px rgb(21, 22, 22) inset", zIndex: "996"}}>
+          <SwiperSlide key={id} style={{position:"relative", overflow: "hidden"}}>
+          <div className='boxproject'>
             <img
                 src={`/assets/${data.image}`} 
                 alt=""
                 style={{"height":"100%", "width":"100%", "position":"absolute", zIndex: -1, objectFit: "cover"}}
             />
           </div>
+          <div style = {{display:"flex", flexDirection:"column", justifyContent:"space-between", width:"100%", height:"100%", position:"absolute", zIndex: "997", backgroundColor:"rgba(0, 0, 0, 0.18)"}}>
+            <h1 className="nameofproject">{data.name}</h1>
+            <p className="descofproject">{data.description}</p> 
+          </div>
             
-            <h1 style={{zIndex: 999, fontSize: "36px", color:"white"}}>{data.name}</h1>
-            <p style={{zIndex: 999, fontSize: "24px", color:"white", margin:"10px", textShadow:"0px 3px 10px rgb(255, 174, 0)"}}>{data.description}</p> 
           </SwiperSlide>
         ))}
       </Swiper>
   );
 }
 
-export default Projects;
+export default ProjectsCoverflow;

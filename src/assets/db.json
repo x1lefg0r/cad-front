@@ -2,21 +2,40 @@
     "projects":[
         {
             "id":1,
-            "name":"3D атлас редукторов",
-            "description":"",
-            "image":"atlas.jpg"
+            "name":"Проект для хакатона ВИХ-рь",
+            "description":"Конструкторское бюро",
+            "image":"vihr.webp"
         },
         {
             "id":2,
-            "name":"ИЭТР на Forge",
-            "description":"",
-            "image":"ietr.jpg"
+            "name":"Интерактивная виртуальная лабораторная работа для детей с нарушением опорно-двигательного аппарата в РОЦ №76",
+            "description":"VR CONCEPT",
+            "image":"rocc.webp"
         },
         {
             "id":3,
-            "name":"Облачное хранилище",
-            "description":"",        
-            "image":"pdm.jpg"
+            "name":"Генератор муфт в nanoCAD",
+            "description":"Разработка инженерного программного обеспечения",
+            "image":"genericmft.webp"
+        },
+        {
+            "id":4,
+            "name":"Конфигуратор пневмопресса – интерактивное 3D-приложение для проектирования",
+            "description":"C3D",
+            "image":"confpnevmo.webp"
+        },
+        {
+            "id":5,
+            "name":"Генератор пружин в nanoCAD",
+            "description":"Разработка инженерного программного обеспечения",
+            "image":"genericspring.webp"
+        },
+        {
+            "id":6,
+            "name":"Mini CAD – первые шаги в мир 3D-моделирования",
+            "description":"C3D",
+            "image":"minicad.webp"
         }
+        
     ]
 }
