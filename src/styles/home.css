@@ -101,10 +101,10 @@
     justify-content: flex-start;
     width: 100%;
 }
-.projectscnt{
+/* .projectscnt{
     position: absolute;
     z-index: 998;
-}
+} */
 .fourth{
     display: flex;
     flex-direction: column;
