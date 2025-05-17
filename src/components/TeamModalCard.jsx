@@ -21,15 +21,13 @@ export default function KeepMountedModal({
   open,
   handleClose,
   header,
-  text,
+  description,
+  teamleader,
+  teamMembers,
   additionalImg,
 }) {
-  // const [open, setOpen] = React.useState(false);
-  // const handleOpen = () => setOpen(true);
-  // const handleClose = () => setOpen(false);
   return (
     <div>
-      {/* <button onClick={handelOpen()}>Open modal</button> */}
       <Modal
         keepMounted
         open={open}
@@ -62,14 +60,17 @@ export default function KeepMountedModal({
               variant="h6"
               component="h2"
             >
-              <p className="Jura" style={{fontSize: '28px'}}>
+              <p
+                className="Jura"
+                style={{fontSize: '28px', alignSelf: 'center'}}
+              >
                 {header}
               </p>
             </Typography>
             <img
               src={`/assets/${additionalImg}`}
               alt=""
-              style={{maxHeight: '360px', alignSelf: 'center'}}
+              style={{maxHeight: '600px', alignSelf: 'center'}}
             />
             <Typography
               id="keep-mounted-modal-description"
@@ -77,7 +78,17 @@ export default function KeepMountedModal({
               style={{}}
             >
               <p className="Jura" style={{fontSize: '24px'}}>
-                {text}
+                {description}
+              </p>
+            </Typography>
+            <Typography id="keep-mounted-modal-description" style={{}}>
+              <p className="Jura" style={{fontSize: '24px'}}>
+                {teamleader}
+              </p>
+            </Typography>
+            <Typography id="keep-mounted-modal-description" style={{}}>
+              <p className="Jura" style={{fontSize: '24px'}}>
+                {teamMembers}
               </p>
             </Typography>
           </div>

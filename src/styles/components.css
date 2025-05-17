@@ -1,170 +1,190 @@
 @import url('https://fonts.googleapis.com/css2?family=Jura:wght@300..700&display=swap');
 
-
-.navigation{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-
-    
+.navigation {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
 }
-.navigation a{
-    text-decoration: none;
-    color: black;
-    font-family: "Jura";
-    font-size: 24px;
-    font-weight: 700;
+.navigation a {
+  text-decoration: none;
+  color: black;
+  font-family: 'Jura';
+  font-size: 24px;
+  font-weight: 700;
 }
 
-.header{
-    display: flex;
-    align-items: center;
-    width: 99%;
-    height: 80px;
-    background-color: white;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-    position: sticky;
-    z-index: 998;
-    border-radius: 20px;
-    margin: 0px;
-    top:10px;
-    left:0px;
-
+.header {
+  display: flex;
+  align-items: center;
+  width: 99%;
+  height: 80px;
+  background-color: white;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  position: sticky;
+  z-index: 998;
+  border-radius: 20px;
+  margin: 0px;
+  top: 10px;
+  left: 0px;
 }
 
-.teamCard{
+.nav-link {
+  transition: color 0.15s;
+}
+.burger-menu-icon {
+  width: 70px;
+  height: 60px;
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .nav-link {
+    display: none;
+  }
+  .burger-menu-icon {
+    display: block;
+  }
+}
+
+.nav-link:hover {
+  color: #ffd900;
+}
+
+.teamCard {
+  height: 220px;
+  width: 900px;
+  background-color: white;
+  /* filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)); */
+  border-radius: 36px;
+  margin: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  transition: background-color 0.3s;
+}
+.teamCard:hover {
+  background-color: #d3d3d3;
+}
+.tcContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.linksleft {
+  margin: 40px;
+  gap: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.linksright {
+  margin: 40px;
+  gap: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  background-color: white;
+  height: 100%;
+}
+
+.footerContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  z-index: 998;
+  height: 160px;
+  /* position: absolute; */
+}
+.teamsdesc {
+  font-family: 'Jura';
+  font-weight: 700;
+  color: #473e4f;
+  position: relative;
+  font-size: 24px;
+  padding: 20px;
+}
+
+.teamlogo {
+  position: relative;
+  display: flex;
+  width: 120px;
+  margin: 22px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.projcard {
+  width: 80%;
+  position: relative;
+  height: 200px;
+  background-color: white;
+  border-radius: 20px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.textproj {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: 'Jura';
+  font-weight: 700;
+  color: #473e4f;
+  position: relative;
+}
+
+.project-button {
+  height: 40px;
+  width: 120px;
+  background-color: #473e4f;
+}
+
+@media (max-width: 1880px) {
+  .navigation a {
+    font-size: 20px;
+  }
+  .teamCard {
     height: 220px;
-    width: 900px;
-    background-color: white;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-    border-radius: 36px;
-    margin: 20px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    position: relative;
-}
-.tcContainer{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
+    width: 600px;
+    margin: 16px;
+  }
+  .teamsdesc {
+    font-size: 20px;
+  }
+  .teamlogo {
+    width: 100px;
+  }
 }
 
-.linksleft{
-    margin: 40px;
-    gap: 40px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-.linksright{
-    margin: 40px;
-    gap: 40px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
+@media (max-width: 1280px) {
+  .navigation a {
+    font-size: 18px;
+  }
+  .teamCard {
+    height: 120px;
+    width: 90%;
+  }
 
-.footer{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    width: 100%;
-    background-color: white;
-    height: 100%;
-
-}
-
-.footerContainer{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    width: 100%;
-    z-index: 998;
-    height: 160px;
-    /* position: absolute; */
-}
-.teamsdesc{
-    font-family: "Jura";
-    font-weight: 700;
-    color: #473E4F;
-    position: relative;
-    font-size: 24px;
-    padding: 20px;
-}
-
-.teamlogo{
-    position: relative;
-    display: flex;
-    width: 120px;
-    margin: 22px;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-}
-
-.projcard{
-    width: 80%;
-    position: relative;
-    height: 200px;
-    background-color: white;
-    border-radius: 20px;
-    filter:drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
-.textproj{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    font-family: "Jura";
-    font-weight: 700;
-    color: #473E4F;
-    position: relative;
-}
-
-.project-button{
-    height: 40px;
-    width: 120px;
-    background-color: #473E4F;
-}
-
-@media (max-width: 1880px){
-    .navigation a{
-        font-size: 20px;
-    }
-    .teamCard{
-        height: 220px;
-        width: 600px;
-        margin: 16px;
-    }
-    .teamsdesc{
-        font-size: 20px;
-    }
-    .teamlogo{
-        width: 100px;
-    }
-}
-
-@media (max-width: 1280px){
-    .navigation a{
-        font-size: 18px;
-    }
-    .teamCard{
-        height: 120px;
-        width: 90%;
-    }
-
-    .teamlogo{
-        width: 80px;
-    }
+  .teamlogo {
+    width: 80px;
+  }
 }
