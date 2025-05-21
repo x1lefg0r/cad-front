@@ -1,4 +1,4 @@
-import {useEffect, useState} from 'react';
+import {useEffect, useState, useRef} from 'react';
 import {useLocation, useNavigate} from 'react-router-dom';
 import '../styles/teams.css';
 import db from '../assets/db.json';
@@ -6,24 +6,23 @@ import KeepMountedModal from '../components/TeamModalCard';
 
 const TeamsPage = () => {
   const [selectedTeam, setSelectedTeam] = useState(null);
-  const {hash} = useLocation();
+  const location = useLocation();
   const navigate = useNavigate();
-  const {teams} = db;
+  const TeamRefs = useRef({});
   useEffect(() => {
-    if (hash) {
-      const id = hash.replace('#', '');
-      const element = document.getElementById(id);
-      if (element) {
-        setSelectedTeam(element);
-        element.scrollIntoView({
-          behavior: 'smooth',
-          block: 'nearest',
-          inline: 'nearest',
-        });
+    if (location.state?.TeamId) {
+      const {TeamId} = location.state;
+      const Team = db.teams.find(p => p.id === TeamId);
+
+      if (Team) {
+        setSelectedTeam(Team);
+        setTimeout(() => {
+          TeamRefs.current[TeamId]?.scrollIntoView({block: 'center'});
+        }, 200);
       }
       navigate('/teams', {replace: true, state: null});
     }
-  }, [hash]);
+  }, [location.state, navigate]);
 
   const handleOpen = team => {
     setSelectedTeam(team);
@@ -35,10 +34,11 @@ const TeamsPage = () => {
 
   return (
     <div className="teamsList">
-      {teams.map(team => (
+      {db.teams.map(team => (
         <div
           key={team.id}
           id={team.id}
+          ref={el => (TeamRefs.current[team.id] = el)}
           className="teamItem"
           onClick={() => handleOpen(team)}
         >
@@ -54,9 +54,6 @@ const TeamsPage = () => {
             <p className="Jura" style={{fontSize: '20px'}}>
               {team.description}
             </p>
-            {/* <p className="Jura">{team.teamleader}</p>
-            <p className="Jura">{team.projects}</p>
-            <p className="Jura">{team.members}</p> */}
           </div>
         </div>
       ))}
@@ -65,7 +62,7 @@ const TeamsPage = () => {
           open={!!selectedTeam}
           handleClose={handleClose}
           header={selectedTeam.name}
-          description={selectedTeam.projects}
+          description={selectedTeam.Teams}
           teamleader={selectedTeam.teamleader}
           teamMembers={selectedTeam.members}
           additionalImg={selectedTeam.additional}

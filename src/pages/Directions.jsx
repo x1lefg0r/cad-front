@@ -4,12 +4,11 @@ import '../styles/projects.css';
 import db from '../assets/db.json';
 import KeepMountedModal from '../components/ModalCard';
 
-const Projects = () => {
+const Direction = () => {
   const [selectedProject, setSelectedProject] = useState(null);
   const location = useLocation();
   const navigate = useNavigate();
   const projectRefs = useRef({});
-  // const {teams} = db;
   useEffect(() => {
     if (location.state?.projectId) {
       const {projectId} = location.state;
@@ -21,7 +20,7 @@ const Projects = () => {
           projectRefs.current[projectId]?.scrollIntoView({block: 'center'});
         }, 200);
       }
-      navigate('/projects', {replace: true, state: null});
+      navigate('/directions', {replace: true, state: null});
     }
   }, [location.state, navigate]);
 
@@ -35,7 +34,7 @@ const Projects = () => {
 
   return (
     <div className="cnt">
-      <div className="info-blocks-projects"
+      <div
         style={{
           display: 'flex',
           flexDirection: 'column',
@@ -56,7 +55,6 @@ const Projects = () => {
             <div
               style={{
                 display: 'flex',
-                flexDirection: 'row',
                 alignItems: 'center',
                 justifyContent: 'flex-start',
               }}
@@ -104,4 +102,4 @@ const Projects = () => {
   );
 };
 
-export default Projects;
+export default Direction;

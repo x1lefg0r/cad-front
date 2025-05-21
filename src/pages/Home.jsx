@@ -53,7 +53,7 @@ const Home = () => {
             </p>
           </div>
           <div className="image-aboutus-container">
-          <img src={img3} alt="" className="usualimage" />
+            <img src={img3} alt="" className="usualimage" />
           </div>
         </div>
       </div>
@@ -90,7 +90,7 @@ const Home = () => {
               key={team.id}
               logo={`/assets/${team.logo}`}
               title={team.name}
-              onClick={() => navigate(`/teams#${team.id}`)}
+              onClick={() => navigate('teams', {state: {TeamId: team.id}})}
             />
           ))}
         </div>

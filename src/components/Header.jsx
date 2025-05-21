@@ -1,8 +1,20 @@
-import '../styles/components.css';
+import {useState} from 'react';
 import {NavLink} from 'react-router';
+import '../styles/components.css';
 import homelogo from '../assets/homelogo.webp';
+import KeepMountedModal from './BurgerModalCard';
 
 const Header = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const toggleModal = () => {
+    setIsModalOpen(!isModalOpen);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
+
   return (
     <header className="header">
       <div className="navigation">
@@ -14,12 +26,13 @@ const Header = () => {
               style={{maxWidth: '60px', maxHeight: '60px', marginLeft: '20px'}}
             ></img>
           </NavLink>
-          <NavLink to="/projects" className="nav-link">
+          <NavLink to="directions" className="nav-link">
             Проекты
           </NavLink>
-          <NavLink to="/teams" className="nav-link">
+          <NavLink to="teams" className="nav-link">
             Команды
           </NavLink>
+          {/* <NavLink className="nav-link">Проекты</NavLink> */}
         </div>
         <div className="linksright">
           <a
@@ -36,15 +49,20 @@ const Header = () => {
             rel="noopener noreferrer"
             className="nav-link"
           >
-            Наш факультет
+            Факультет
           </a>
-        <a
-        href=''
-        >
-          <img className="burger-menu-icon" src="/src/assets/burger-menu.png" alt="" />
-        </a>
+          <button onClick={() => toggleModal()}>
+            <img
+              className="burger-menu-icon"
+              src="/src/assets/burger-menu.png"
+              alt=""
+            />
+          </button>
         </div>
       </div>
+      {isModalOpen && (
+        <KeepMountedModal open={!!isModalOpen} handleClose={closeModal} />
+      )}
     </header>
   );
 };

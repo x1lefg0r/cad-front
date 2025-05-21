@@ -24,12 +24,8 @@ export default function KeepMountedModal({
   text,
   additionalImg,
 }) {
-  // const [open, setOpen] = React.useState(false);
-  // const handleOpen = () => setOpen(true);
-  // const handleClose = () => setOpen(false);
   return (
     <div>
-      {/* <button onClick={handelOpen()}>Open modal</button> */}
       <Modal
         keepMounted
         open={open}
@@ -66,20 +62,34 @@ export default function KeepMountedModal({
                 {header}
               </p>
             </Typography>
-            <img
-              src={`/assets/${additionalImg}`}
-              alt=""
-              style={{maxHeight: '360px', alignSelf: 'center'}}
-            />
-            <Typography
-              id="keep-mounted-modal-description"
-              sx={{mt: 2}}
-              style={{}}
+            <div
+              className="modal__description"
+              style={{
+                overflow: 'hidden',
+                width: '100%',
+              }}
             >
-              <p className="Jura" style={{fontSize: '24px'}}>
+              <img
+                src={`/assets/${additionalImg}`}
+                alt=""
+                style={{
+                  float: 'left',
+                  marginRight: '16px',
+                  marginBottom: '8px',
+                  maxHeight: '360px',
+                  width: 'auto',
+                }}
+              />
+              <div
+                className="Jura"
+                style={{
+                  fontSize: '24px',
+                  lineHeight: 1.5,
+                }}
+              >
                 {text}
-              </p>
-            </Typography>
+              </div>
+            </div>
           </div>
         </Box>
       </Modal>

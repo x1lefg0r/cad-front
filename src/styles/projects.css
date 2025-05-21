@@ -18,10 +18,9 @@
 }
 @media screen and (max-width: 850px) {
   .projcard {
-      flex-direction: column;
-      height: 300px;
+    flex-direction: column;
+    height: 300px;
   }
-
 }
 @media screen and (max-width: 670px) {
   .projcard img {
@@ -33,24 +32,24 @@
   }
 }
 @media screen and (max-width: 570px) {
-    .projcard img {
-      margin-left: 30px;
-      margin-right: -10px;
-    }
-    .Jura {
-      font-size: 15px !important;
-    }
+  .projcard img {
+    margin-left: 30px;
+    margin-right: -10px;
+  }
+  .Jura {
+    font-size: 15px !important;
+  }
 }
 @media screen and (max-width: 480px) {
-    .projcard img {
-      margin-right: -20px;
-      width: 200px !important; 
-    }
+  .projcard img {
+    margin-right: -20px;
+    width: 200px !important;
+  }
 }
 @media screen and (max-width: 400px) {
-    .projcard img {
-      margin-right: -30px;
-    }
+  .projcard img {
+    margin-right: -30px;
+  }
 }
 .projcard:hover {
   background-color: #d3d3d3;

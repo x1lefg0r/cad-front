@@ -41,6 +41,7 @@ export default function KeepMountedModal({
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
+            overflowX: 'hidden',
           }}
         >
           <div
@@ -70,27 +71,35 @@ export default function KeepMountedModal({
             <img
               src={`/assets/${additionalImg}`}
               alt=""
-              style={{maxHeight: '600px', alignSelf: 'center'}}
+              style={{
+                maxHeight: '600px',
+                alignSelf: 'center',
+                minHeight: '100px',
+                minWidth: '100px',
+              }}
+              className="title__image"
             />
-            <Typography
-              id="keep-mounted-modal-description"
-              sx={{mt: 2}}
-              style={{}}
-            >
-              <p className="Jura" style={{fontSize: '24px'}}>
-                {description}
-              </p>
-            </Typography>
-            <Typography id="keep-mounted-modal-description" style={{}}>
-              <p className="Jura" style={{fontSize: '24px'}}>
-                {teamleader}
-              </p>
-            </Typography>
-            <Typography id="keep-mounted-modal-description" style={{}}>
-              <p className="Jura" style={{fontSize: '24px'}}>
-                {teamMembers}
-              </p>
-            </Typography>
+            <div className="title__description">
+              <Typography
+                id="keep-mounted-modal-description"
+                sx={{mt: 2}}
+                style={{}}
+              >
+                <p className="Jura" style={{fontSize: '24px'}}>
+                  {description}
+                </p>
+              </Typography>
+              <Typography id="keep-mounted-modal-description" style={{}}>
+                <p className="Jura" style={{fontSize: '24px'}}>
+                  {teamleader}
+                </p>
+              </Typography>
+              <Typography id="keep-mounted-modal-description" style={{}}>
+                <p className="Jura" style={{fontSize: '24px'}}>
+                  {teamMembers}
+                </p>
+              </Typography>
+            </div>
           </div>
         </Box>
       </Modal>
