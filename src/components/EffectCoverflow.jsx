@@ -11,7 +11,7 @@ const ProjectsCoverflow = props => {
   const data = props.data.projects;
 
   const handleClick = useCallback(projectId => {
-    navigate('directions', {state: {projectId}});
+    navigate('projects', {state: {projectId}});
   }, []);
 
   return (

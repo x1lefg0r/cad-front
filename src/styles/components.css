@@ -46,7 +46,7 @@ button {
   background-color: transparent;
   cursor: pointer;
 }
-@media screen and (max-width: 780px) {
+@media screen and (max-width: 980px) {
   .nav-link {
     display: none;
   }
@@ -63,7 +63,6 @@ button {
   height: 220px;
   width: 900px;
   background-color: white;
-  /* filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)); */
   border-radius: 36px;
   margin: 20px;
   display: flex;

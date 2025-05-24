@@ -1,20 +1,25 @@
+import {Link} from 'react-router-dom';
 import Box from '@mui/material/Box';
 import Modal from '@mui/material/Modal';
 import Typography from '@mui/material/Typography';
+import db from '../assets/db.json';
+import '../styles/ModalCard.css';
 
-const style = {
+const modalStyle = {
   position: 'absolute',
   top: '50%',
   left: '50%',
-  transform: 'translate(-50%, -50%) scale(0.95)',
+  transform: 'translate(-50%, -50%)',
   width: '80%',
-  height: '70%',
-  bgcolor: 'background.paper',
-  border: '2px solid #000',
-  boxShadow: 24,
+  maxWidth: '1000px',
+  maxHeight: '80vh',
+  bgcolor: '#ffffff',
+  border: '2px solid #ffd900',
+  borderRadius: '8px',
   p: 4,
-  borderRadius: 5,
-  transition: 'transform 0.3s ease-in-out',
+  display: 'flex',
+  flexDirection: 'column',
+  overflow: 'hidden',
 };
 
 export default function KeepMountedModal({
@@ -23,76 +28,70 @@ export default function KeepMountedModal({
   header,
   text,
   additionalImg,
+  teamleader,
+  teamMembers,
+  projectId,
 }) {
+  const project = projectId ? db.projects.find(p => p.id === projectId) : null;
+  const linkedTeam = project?.linkedTeamId
+    ? db.teams.find(t => t.id === project.linkedTeamId)
+    : null;
+
   return (
-    <div>
-      <Modal
-        keepMounted
-        open={open}
-        onClose={handleClose}
-        aria-labelledby="keep-mounted-modal-title"
-        aria-describedby="keep-mounted-modal-description"
-      >
-        <Box
-          sx={style}
-          style={{
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-          }}
-        >
-          <div
-            className="boxi"
-            style={{
-              display: 'flex',
-              flexDirection: 'column',
-              alignItems: 'flex-start',
-              overflow: 'auto',
-              scrollbarColor: '#FFBE56 #FFECB8',
-              width: '100%',
-              paddingRight: '8px',
-            }}
-          >
-            <Typography
-              id="keep-mounted-modal-title"
-              variant="h6"
-              component="h2"
-            >
-              <p className="Jura" style={{fontSize: '28px'}}>
-                {header}
-              </p>
-            </Typography>
-            <div
-              className="modal__description"
-              style={{
-                overflow: 'hidden',
-                width: '100%',
-              }}
-            >
-              <img
-                src={`/assets/${additionalImg}`}
-                alt=""
-                style={{
-                  float: 'left',
-                  marginRight: '16px',
-                  marginBottom: '8px',
-                  maxHeight: '360px',
-                  width: 'auto',
-                }}
-              />
-              <div
-                className="Jura"
-                style={{
-                  fontSize: '24px',
-                  lineHeight: 1.5,
-                }}
-              >
-                {text}
-              </div>
+    <Modal
+      keepMounted
+      open={open}
+      onClose={handleClose}
+      aria-labelledby="modal-title"
+    >
+      <Box sx={modalStyle}>
+        <div className="modal-content">
+          <Typography id="modal-title" variant="h6" component="h2">
+            <h2 className="modal-header Jura">{header}</h2>
+          </Typography>
+          <div className="modal-details">
+            <div className="modal-description">
+              {additionalImg && (
+                <img
+                  src={`/assets/${additionalImg}`}
+                  alt={header}
+                  className="modal-image"
+                />
+              )}
+              <Typography>
+                <p className="modal-text Jura">{text}</p>
+              </Typography>
             </div>
+            {teamleader && (
+              <Typography>
+                <p className="modal-text Jura">{teamleader}</p>
+              </Typography>
+            )}
+            {teamMembers && (
+              <Typography>
+                <p className="modal-text Jura">{teamMembers}</p>
+              </Typography>
+            )}
+            {linkedTeam && (
+              <div className="modal-section">
+                <h3 className="modal-subheader Jura">Направление</h3>
+                <div className="modal-list">
+                  <div className="modal-list-item">
+                    <Link
+                      to="/teams"
+                      state={{teamId: linkedTeam.id}}
+                      className="modal-list-title Jura modal-link"
+                      onClick={handleClose}
+                    >
+                      {linkedTeam.name}
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            )}
           </div>
-        </Box>
-      </Modal>
-    </div>
+        </div>
+      </Box>
+    </Modal>
   );
 }

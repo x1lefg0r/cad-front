@@ -1,4 +1,4 @@
-import {useEffect, useState, useRef} from 'react';
+import {useState, useEffect, useRef} from 'react';
 import {useLocation, useNavigate} from 'react-router-dom';
 import '../styles/teams.css';
 import db from '../assets/db.json';
@@ -8,16 +8,17 @@ const TeamsPage = () => {
   const [selectedTeam, setSelectedTeam] = useState(null);
   const location = useLocation();
   const navigate = useNavigate();
-  const TeamRefs = useRef({});
-  useEffect(() => {
-    if (location.state?.TeamId) {
-      const {TeamId} = location.state;
-      const Team = db.teams.find(p => p.id === TeamId);
+  const teamRefs = useRef({});
 
-      if (Team) {
-        setSelectedTeam(Team);
+  useEffect(() => {
+    if (location.state?.teamId) {
+      const {teamId} = location.state;
+      const team = db.teams.find(t => t.id === teamId);
+
+      if (team) {
+        setSelectedTeam(team);
         setTimeout(() => {
-          TeamRefs.current[TeamId]?.scrollIntoView({block: 'center'});
+          teamRefs.current[teamId]?.scrollIntoView({block: 'center'});
         }, 200);
       }
       navigate('/teams', {replace: true, state: null});
@@ -33,39 +34,40 @@ const TeamsPage = () => {
   };
 
   return (
-    <div className="teamsList">
-      {db.teams.map(team => (
-        <div
-          key={team.id}
-          id={team.id}
-          ref={el => (TeamRefs.current[team.id] = el)}
-          className="teamItem"
-          onClick={() => handleOpen(team)}
-        >
-          <img
-            src={`/assets/${team.logo}`}
-            alt={team.title}
-            className="teamLogo"
-          />
-          <div className="teamContent">
-            <p className="Jura" style={{fontSize: '24px'}}>
-              {team.name}
-            </p>
-            <p className="Jura" style={{fontSize: '20px'}}>
-              {team.description}
-            </p>
+    <div className="teams-container">
+      <div className="teams-grid">
+        {db.teams.map(team => (
+          <div
+            key={team.id}
+            ref={el => (teamRefs.current[team.id] = el)}
+            className="team-card"
+            onClick={() => handleOpen(team)}
+          >
+            <img
+              src={`/assets/${team.logo}`}
+              alt={team.name}
+              className="team-image"
+            />
+            <div className="team-content">
+              <h3 className="team-name Jura">{team.name}</h3>
+              <p className="team-description Jura">{team.description}</p>
+            </div>
+            <button className="team-button" onClick={() => handleOpen(team)}>
+              <span className="team-button-text">Подробнее</span>
+            </button>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
       {selectedTeam && (
         <KeepMountedModal
           open={!!selectedTeam}
           handleClose={handleClose}
           header={selectedTeam.name}
-          description={selectedTeam.Teams}
+          text={selectedTeam.description}
           teamleader={selectedTeam.teamleader}
           teamMembers={selectedTeam.members}
           additionalImg={selectedTeam.additional}
+          teamId={selectedTeam.id}
         />
       )}
     </div>

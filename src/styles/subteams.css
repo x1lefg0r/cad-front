@@ -1,73 +1,54 @@
-.teams-container {
+.subteams-container {
   font-family: 'Jura', sans-serif;
   max-width: 1200px;
   margin: 0 auto;
   padding: 40px 20px;
   background-color: #ffffff;
+  border: 2px solid #ffd900;
+  margin-bottom: 20px;
 }
 
-.teams-grid {
+.direction-section {
+  margin-bottom: 40px;
+}
+
+.direction-header {
+  font-size: 28px;
+  font-weight: bold;
+  color: #000000;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.subteams-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
 }
 
-.team-card {
+.subteam-card {
   background-color: #ffffff;
   border: 2px solid #ffd900;
   border-radius: 8px;
   padding: 20px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer;
 }
 
-.team-card:hover {
+.subteam-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
-.team-image {
-  max-height: 180px;
-  width: auto;
-  border-radius: 8px;
-  margin-bottom: 12px;
-}
-
-.team-content {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.team-name {
+.subteam-name {
   font-size: 22px;
   font-weight: bold;
   color: #000000;
+  margin-bottom: 10px;
 }
 
-.team-description {
+.subteam-description {
   font-size: 16px;
   color: #333333;
   line-height: 1.5;
-}
-
-.team-button {
-  background-color: #ffd900;
-  border: none;
-  border-radius: 6px;
-  padding: 10px;
-  margin-top: 12px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.team-button:hover {
-  background-color: #ffeb3b;
-}
-
-.team-button-text {
-  font-family: 'Jura', sans-serif;
-  font-size: 16px;
-  color: #000000;
 }

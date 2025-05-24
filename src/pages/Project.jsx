@@ -4,7 +4,7 @@ import '../styles/projects.css';
 import db from '../assets/db.json';
 import KeepMountedModal from '../components/ModalCard';
 
-const Direction = () => {
+const Project = () => {
   const [selectedProject, setSelectedProject] = useState(null);
   const location = useLocation();
   const navigate = useNavigate();
@@ -20,7 +20,7 @@ const Direction = () => {
           projectRefs.current[projectId]?.scrollIntoView({block: 'center'});
         }, 200);
       }
-      navigate('/directions', {replace: true, state: null});
+      navigate('/projects', {replace: true, state: null});
     }
   }, [location.state, navigate]);
 
@@ -96,10 +96,12 @@ const Direction = () => {
           header={selectedProject.name}
           text={selectedProject.more}
           additionalImg={selectedProject.additional}
+          teamId={selectedProject.linkedTeamId}
+          projectId={selectedProject.id}
         />
       )}
     </div>
   );
 };
 
-export default Direction;
+export default Project;

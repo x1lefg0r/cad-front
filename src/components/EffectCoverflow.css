@@ -16,6 +16,7 @@
   height: 440px;
   cursor: pointer;
   background-color: #ffffff;
+  margin-inline: 5px;
   border-radius: 12px;
   overflow: hidden;
   transition: transform 0.3s ease;

@@ -26,13 +26,15 @@ const Header = () => {
               style={{maxWidth: '60px', maxHeight: '60px', marginLeft: '20px'}}
             ></img>
           </NavLink>
-          <NavLink to="directions" className="nav-link">
+          <NavLink to="projects" className="nav-link">
             Проекты
           </NavLink>
           <NavLink to="teams" className="nav-link">
+            Направления
+          </NavLink>
+          <NavLink to="subteams" className="nav-link">
             Команды
           </NavLink>
-          {/* <NavLink className="nav-link">Проекты</NavLink> */}
         </div>
         <div className="linksright">
           <a
