@@ -13,7 +13,7 @@
 }
 
 .direction-header {
-  font-size: 28px;
+  font-size: 30px;
   font-weight: bold;
   color: #000000;
   margin-bottom: 20px;
@@ -32,7 +32,9 @@
   border-radius: 8px;
   padding: 20px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .subteam-card:hover {
@@ -41,14 +43,14 @@
 }
 
 .subteam-name {
-  font-size: 22px;
+  font-size: 24px;
   font-weight: bold;
   color: #000000;
   margin-bottom: 10px;
 }
 
 .subteam-description {
-  font-size: 16px;
+  font-size: 18px;
   color: #333333;
   line-height: 1.5;
 }
