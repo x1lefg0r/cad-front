@@ -44,7 +44,7 @@ const Home = () => {
         <div className="box">
           <div className="text">
             <p className="aboutus">О нас</p>
-            <p className="optimaaboutus">
+            <p className="optimaaboutus Jura">
               Наш центр имеет уникальные команды, работающие над разработкой
               интересных и востребованных проектов. Основная область нашей
               деятельности - работа с CAD системами и движками,
@@ -88,11 +88,9 @@ const Home = () => {
           {teams.map(team => (
             <TeamCard
               key={team.id}
-              logo={`assets/${team.logo}`}
+              logo={`cad-front/assets/${team.logo}`}
               title={team.name}
-              onClick={() =>
-                navigate('cad-front/teams', {state: {TeamId: team.id}})
-              }
+              onClick={() => navigate('teams', {state: {TeamId: team.id}})}
             />
           ))}
         </div>
