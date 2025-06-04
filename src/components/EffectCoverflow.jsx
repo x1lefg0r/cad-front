@@ -41,7 +41,7 @@ const ProjectsCoverflow = props => {
           className="project-slide"
         >
           <div className="slide-background">
-            <img src={`assets/${project.image}`} alt={project.name} />
+            <img src={`cad-front/assets/${project.image}`} alt={project.name} />
           </div>
           <div className="slide-overlay">
             <h1 className="nameofproject">{project.name}</h1>
