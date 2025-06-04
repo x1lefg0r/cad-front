@@ -21,7 +21,7 @@ const TeamsPage = () => {
           teamRefs.current[teamId]?.scrollIntoView({block: 'center'});
         }, 200);
       }
-      navigate('/teams', {replace: true, state: null});
+      navigate('/cad-front/teams', {replace: true, state: null});
     }
   }, [location.state, navigate]);
 
@@ -44,7 +44,7 @@ const TeamsPage = () => {
             onClick={() => handleOpen(team)}
           >
             <img
-              src={`cad-front/assets/${team.logo}`}
+              src={`assets/${team.logo}`}
               alt={team.name}
               className="team-image"
             />

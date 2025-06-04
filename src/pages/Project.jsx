@@ -20,7 +20,7 @@ const Project = () => {
           projectRefs.current[projectId]?.scrollIntoView({block: 'center'});
         }, 200);
       }
-      navigate('/projects', {replace: true, state: null});
+      navigate('/cad-front/projects', {replace: true, state: null});
     }
   }, [location.state, navigate]);
 
@@ -60,7 +60,7 @@ const Project = () => {
               }}
             >
               <img
-                src={`cad-front/assets/${project.image}`}
+                src={`assets/${project.image}`}
                 alt={project.name}
                 style={{
                   width: '300px',

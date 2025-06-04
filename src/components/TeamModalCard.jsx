@@ -55,7 +55,7 @@ export default function KeepMountedModal({
           </Typography>
           {additionalImg && (
             <img
-              src={`cad-front/assets/${additionalImg}`}
+              src={`assets/${additionalImg}`}
               alt={header}
               className="modal-image"
             />
@@ -81,7 +81,7 @@ export default function KeepMountedModal({
                   {subteams.map(subteam => (
                     <div key={subteam.name} className="modal-list-item">
                       <Link
-                        to="/subteams"
+                        to="/cad-front/subteams"
                         state={{subTeamId: subteam.name}}
                         className="modal-list-title Jura modal-link"
                         onClick={handleClose}
@@ -100,7 +100,7 @@ export default function KeepMountedModal({
                   {projects.map(project => (
                     <div key={project.id} className="modal-list-item">
                       <Link
-                        to="/projects"
+                        to="/cad-front/projects"
                         state={{projectId: project.id}}
                         className="modal-list-title Jura modal-link"
                         onClick={handleClose}

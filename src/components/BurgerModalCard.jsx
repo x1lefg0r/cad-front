@@ -52,13 +52,25 @@ export default function KeepMountedModal({open, handleClose}) {
           }}
           onClick={e => e.stopPropagation()}
         >
-          <NavLink to="/teams" onClick={handleClose} className="modal-link">
+          <NavLink
+            to="/cad-front/teams"
+            onClick={handleClose}
+            className="modal-link"
+          >
             Направления
           </NavLink>
-          <NavLink to="/projects" onClick={handleClose} className="modal-link">
+          <NavLink
+            to="/cad-front/projects"
+            onClick={handleClose}
+            className="modal-link"
+          >
             Проекты
           </NavLink>
-          <NavLink to="/subteams" onClick={handleClose} className="modal-link">
+          <NavLink
+            to="/cad-front/subteams"
+            onClick={handleClose}
+            className="modal-link"
+          >
             Команды
           </NavLink>
           <a

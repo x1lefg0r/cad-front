@@ -53,7 +53,7 @@ export default function KeepMountedModal({
             <div className="modal-description">
               {additionalImg && (
                 <img
-                  src={`cad-front/assets/${additionalImg}`}
+                  src={`assets/${additionalImg}`}
                   alt={header}
                   className="modal-image"
                 />
@@ -78,7 +78,7 @@ export default function KeepMountedModal({
                 <div className="modal-list">
                   <div className="modal-list-item">
                     <Link
-                      to="/teams"
+                      to="/cad-front/teams"
                       state={{teamId: linkedTeam.id}}
                       className="modal-list-title Jura modal-link"
                       onClick={handleClose}

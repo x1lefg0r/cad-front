@@ -11,10 +11,10 @@ const Navigation = () => {
     <BrowserRouter>
       <Header />
       <Routes>
-        <Route index element={<Home />} />
-        <Route path="teams" element={<Teams />} />
-        <Route path="projects" element={<Project />} />
-        <Route path="subteams" element={<SubTeamsPage />} />
+        <Route path="cad-front" index element={<Home />} />
+        <Route path="cad-front/teams" element={<Teams />} />
+        <Route path="cad-front/projects" element={<Project />} />
+        <Route path="cad-front/subteams" element={<SubTeamsPage />} />
       </Routes>
       <Footer />
     </BrowserRouter>

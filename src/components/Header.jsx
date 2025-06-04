@@ -19,20 +19,20 @@ const Header = () => {
     <header className="header">
       <div className="navigation">
         <div className="linksleft">
-          <NavLink to="/" className="nav-link-image">
+          <NavLink to="cad-front" className="nav-link-image">
             <img
               src={homelogo}
               alt="Home"
               style={{maxWidth: '60px', maxHeight: '60px', marginLeft: '20px'}}
             ></img>
           </NavLink>
-          <NavLink to="projects" className="nav-link">
+          <NavLink to="cad-front/projects" className="nav-link">
             Проекты
           </NavLink>
-          <NavLink to="teams" className="nav-link">
+          <NavLink to="cad-front/teams" className="nav-link">
             Направления
           </NavLink>
-          <NavLink to="subteams" className="nav-link">
+          <NavLink to="cad-front/subteams" className="nav-link">
             Команды
           </NavLink>
         </div>
@@ -56,8 +56,8 @@ const Header = () => {
           <button onClick={() => toggleModal()}>
             <img
               className="burger-menu-icon"
-              src="cad-front/src/assets/burger-menu.png"
-              alt=""
+              src="assets/burger-menu.png"
+              alt="menu icon"
             />
           </button>
         </div>

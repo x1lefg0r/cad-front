@@ -14,7 +14,7 @@ const SubTeamsPage = () => {
       setTimeout(() => {
         subTeamRefs.current[subTeamId]?.scrollIntoView({block: 'center'});
       }, 200);
-      navigate('/subteams', {replace: true, state: null});
+      navigate('/cad-front/subteams', {replace: true, state: null});
     }
   }, [location.state, navigate]);
 
