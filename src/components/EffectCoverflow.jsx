@@ -23,6 +23,16 @@ const ProjectsCoverflow = props => {
       navigation={true}
       className="mySwiper"
       loop={true}
+      breakpoints={{
+        320: {
+          slidesPerView: 1,
+          spaceBetween: 10,
+        },
+        768: {
+          slidesPerView: 'auto',
+          spaceBetween: 5,
+        },
+      }}
     >
       {data.map(project => (
         <SwiperSlide

@@ -241,9 +241,52 @@
   }
 }
 @media screen and (max-width: 576px) {
+  html {
+    overflow-x: hidden;
+  }
+  .title {
+    max-width: 100vw;
+  }
+  .title p {
+    font-size: 30px;
+  }
   .usualimage {
-    width: 400px !important;
+    width: 70vw !important;
     margin-top: -100px;
+  }
+  .image-aboutus-container {
+    padding-top: 50px;
+    align-self: center;
+  }
+  .box {
+    justify-content: start;
+    align-items: start;
+  }
+  .third {
+    padding-top: 70px;
+  }
+  .third .Dela {
+    margin: 0;
+    padding-left: 15vw;
+    padding-bottom: 40px;
+  }
+  .swiper {
+    top: 75px;
+    max-width: 100vw;
+  }
+  .fourth {
+    padding-top: 350px;
+    margin-top: 0;
+  }
+  .teamsContainer {
+    max-width: 100vw;
+  }
+  .teamsdesc {
+    visibility: hidden;
+    width: 0;
+  }
+  .tcContainer {
+    max-width: 80%;
   }
 }
 @media (max-width: 1820px) {
