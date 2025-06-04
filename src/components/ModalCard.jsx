@@ -53,7 +53,7 @@ export default function KeepMountedModal({
             <div className="modal-description">
               {additionalImg && (
                 <img
-                  src={`/assets/${additionalImg}`}
+                  src={`cad-front/assets/${additionalImg}`}
                   alt={header}
                   className="modal-image"
                 />

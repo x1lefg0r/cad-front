@@ -88,7 +88,7 @@ const Home = () => {
           {teams.map(team => (
             <TeamCard
               key={team.id}
-              logo={`/assets/${team.logo}`}
+              logo={`cad-front/assets/${team.logo}`}
               title={team.name}
               onClick={() => navigate('teams', {state: {TeamId: team.id}})}
             />

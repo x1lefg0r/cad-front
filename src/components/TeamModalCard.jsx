@@ -55,7 +55,7 @@ export default function KeepMountedModal({
           </Typography>
           {additionalImg && (
             <img
-              src={`/assets/${additionalImg}`}
+              src={`cadfront/assets/${additionalImg}`}
               alt={header}
               className="modal-image"
             />

@@ -60,7 +60,7 @@ const Project = () => {
               }}
             >
               <img
-                src={`/cad-front/public/assets/${project.image}`}
+                src={`cad-front/assets/${project.image}`}
                 alt={project.name}
                 style={{
                   width: '300px',

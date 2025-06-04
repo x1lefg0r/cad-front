@@ -56,7 +56,7 @@ const Header = () => {
           <button onClick={() => toggleModal()}>
             <img
               className="burger-menu-icon"
-              src="/src/assets/burger-menu.png"
+              src="cad-front/src/assets/burger-menu.png"
               alt=""
             />
           </button>

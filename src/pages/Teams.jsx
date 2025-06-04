@@ -44,7 +44,7 @@ const TeamsPage = () => {
             onClick={() => handleOpen(team)}
           >
             <img
-              src={`/assets/${team.logo}`}
+              src={`cad-front/assets/${team.logo}`}
               alt={team.name}
               className="team-image"
             />
