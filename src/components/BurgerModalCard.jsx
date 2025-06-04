@@ -52,14 +52,13 @@ export default function KeepMountedModal({open, handleClose}) {
           }}
           onClick={e => e.stopPropagation()}
         >
-          <NavLink
-            to="/directions"
-            onClick={handleClose}
-            className="modal-link"
-          >
+          <NavLink to="/teams" onClick={handleClose} className="modal-link">
+            Направления
+          </NavLink>
+          <NavLink to="/projects" onClick={handleClose} className="modal-link">
             Проекты
           </NavLink>
-          <NavLink to="/teams" onClick={handleClose} className="modal-link">
+          <NavLink to="/subteams" onClick={handleClose} className="modal-link">
             Команды
           </NavLink>
           <a
