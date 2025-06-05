@@ -8,14 +8,22 @@ import {Navigation} from 'swiper/modules';
 
 const ProjectsCoverflow = props => {
   const navigate = useNavigate();
-  const data = props.data.projects;
+  const data = props.data?.projects || [];
 
-  const handleClick = useCallback(projectId => {
-    navigate('projects', {state: {projectId}});
-  }, []);
+  const handleClick = useCallback(
+    projectId => {
+      navigate('/projects', {state: {projectId}});
+    },
+    [navigate],
+  );
+
+  if (data.length === 0) {
+    return <div className="loading">Loading projects...</div>;
+  }
 
   return (
     <Swiper
+      key={data.length}
       grabCursor={true}
       centeredSlides={true}
       slidesPerView={'auto'}
@@ -41,7 +49,11 @@ const ProjectsCoverflow = props => {
           className="project-slide"
         >
           <div className="slide-background">
-            <img src={`cad-front/assets/${project.image}`} alt={project.name} />
+            <img
+              src={`/cad-front/assets/${project.image}`}
+              alt={project.name}
+              loading="lazy"
+            />
           </div>
           <div className="slide-overlay">
             <h1 className="nameofproject">{project.name}</h1>
